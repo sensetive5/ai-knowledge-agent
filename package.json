@@ -1,25 +1,9 @@
 {
   "name": "ai-knowledge-agent",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.0.4",
-      "onFail": "download"
-    }
-  },
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@11.0.4",
   "engines": {
     "node": ">=20"
-  },
-  "type": "module"
+  }
 }

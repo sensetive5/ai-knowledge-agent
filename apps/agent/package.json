@@ -4,11 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "hello": "tsx src/hello.ts"
+    "hello": "tsx src/hello.ts",
+    "agent": "tsx src/agent.ts"
   },
   "dependencies": {
     "@agent/db": "workspace:*",
-    "openai": "^7.16.0"
+    "openai": "^7.16.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/node": "^26.6.0",

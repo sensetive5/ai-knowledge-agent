@@ -207,6 +207,25 @@ importers:
 
   .: {}
 
+  apps/agent:
+    dependencies:
+      '@agent/db':
+        specifier: workspace:*
+        version: link:../../packages/db
+      openai:
+        specifier: ^7.16.0
+        version: 7.16.0
+    devDependencies:
+      '@types/node':
+        specifier: ^26.6.0
+        version: 26.6.0
+      tsx:
+        specifier: ^4.23.13
+        version: 4.23.13
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+
   packages/db:
     dependencies:
       drizzle-orm:
@@ -937,6 +956,30 @@ packages:
   get-tsconfig@4.14.3:
     resolution: {integrity: sha512-++QEw4DIY7WGoukz+/+A/8dGYPT9l9yIadnmSgZ8Rjr3YVSVDipQSO9CdnJo9ePqFqUUqh+wk9uIaoiAwsiPkA==}
 
+  openai@7.16.0:
+    resolution: {integrity: sha512-aeDOKi45g3KdjxBFOQAHLZ75p7ASPBR3Mx7h3P34+tNPsJ+Wzi7SRF8gOcXFvNuLh+7LxHRYgIERrTIzhdI2VA==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
+      '@smithy/hash-node': '>=4.3.0 <5'
+      '@smithy/signature-v4': '>=5.4.0 <6'
+      undici: '>=5 <9'
+      ws: ^8.21.0
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-node':
+        optional: true
+      '@smithy/hash-node':
+        optional: true
+      '@smithy/signature-v4':
+        optional: true
+      undici:
+        optional: true
+      ws:
+        optional: true
+      zod:
+        optional: true
+
   pg-cloudflare@1.4.0:
     resolution: {integrity: sha512-Vo7z/6rrQYxpNRylp4Tlob2elzbh+N/MOQbxFVWCxS7oEx6jF53GTJFxK2WWpKuBRkmiin4Mt+xofFDjx09R0A==}
 
@@ -1427,6 +1470,8 @@ snapshots:
   get-tsconfig@4.14.3:
     dependencies:
       resolve-pkg-maps: 1.0.0
+
+  openai@7.16.0: {}
 
   pg-cloudflare@1.4.0:
     optional: true
